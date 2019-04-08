@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		68B16D4E225BA78B00A74BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B16D4D225BA78A00A74BEB /* AppDelegate.swift */; };
-		68B16D50225BA78B00A74BEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B16D4F225BA78B00A74BEB /* ViewController.swift */; };
 		68B16D53225BA78B00A74BEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B16D51225BA78B00A74BEB /* Main.storyboard */; };
 		68B16D55225BA78C00A74BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B16D54225BA78C00A74BEB /* Assets.xcassets */; };
 		68B16D58225BA78C00A74BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B16D56225BA78C00A74BEB /* LaunchScreen.storyboard */; };
 		68B16D63225BA78D00A74BEB /* BullingtongConversionCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B16D62225BA78D00A74BEB /* BullingtongConversionCalcTests.swift */; };
 		68B16D6E225BA78D00A74BEB /* BullingtongConversionCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B16D6D225BA78D00A74BEB /* BullingtongConversionCalcUITests.swift */; };
+		68B16D7E225BBB9D00A74BEB /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B16D7D225BBB9D00A74BEB /* ConverterViewController.swift */; };
+		68B16D80225BC90400A74BEB /* ConverterStruc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B16D7F225BC90400A74BEB /* ConverterStruc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		68B16D4A225BA78A00A74BEB /* BullingtongConversionCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullingtongConversionCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B16D4D225BA78A00A74BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68B16D4F225BA78B00A74BEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		68B16D52225BA78B00A74BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68B16D54225BA78C00A74BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68B16D57225BA78C00A74BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		68B16D69225BA78D00A74BEB /* BullingtongConversionCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullingtongConversionCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B16D6D225BA78D00A74BEB /* BullingtongConversionCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullingtongConversionCalcUITests.swift; sourceTree = "<group>"; };
 		68B16D6F225BA78D00A74BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B16D7D225BBB9D00A74BEB /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		68B16D7F225BC90400A74BEB /* ConverterStruc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterStruc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				68B16D4D225BA78A00A74BEB /* AppDelegate.swift */,
-				68B16D4F225BA78B00A74BEB /* ViewController.swift */,
 				68B16D51225BA78B00A74BEB /* Main.storyboard */,
 				68B16D54225BA78C00A74BEB /* Assets.xcassets */,
 				68B16D56225BA78C00A74BEB /* LaunchScreen.storyboard */,
 				68B16D59225BA78C00A74BEB /* Info.plist */,
+				68B16D7D225BBB9D00A74BEB /* ConverterViewController.swift */,
+				68B16D7F225BC90400A74BEB /* ConverterStruc.swift */,
 			);
 			path = BullingtongConversionCalc;
 			sourceTree = "<group>";
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B16D50225BA78B00A74BEB /* ViewController.swift in Sources */,
 				68B16D4E225BA78B00A74BEB /* AppDelegate.swift in Sources */,
+				68B16D7E225BBB9D00A74BEB /* ConverterViewController.swift in Sources */,
+				68B16D80225BC90400A74BEB /* ConverterStruc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

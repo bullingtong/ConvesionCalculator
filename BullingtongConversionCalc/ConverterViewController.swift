@@ -14,6 +14,8 @@ class ConverterViewController: UIViewController {
     
     @IBOutlet weak var inputDisplay: UITextField!
     
+    var currentConv: Int = 0
+    
     
     
     let converters = [Converter(label: "Fahrenheit to Celsius", inputUnit: "°F", outputUnit:                   "°C"),
@@ -24,8 +26,8 @@ class ConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.outputDisplay.text = self.converters[0].outputUnit
-        self.inputDisplay.text = self.converters[0].inputUnit
+        self.outputDisplay.text = "" + self.converters[0].outputUnit
+        self.inputDisplay.text = "" + self.converters[0].inputUnit
         // Do any additional setup after loading the view.
     }
     
@@ -35,29 +37,53 @@ class ConverterViewController: UIViewController {
         conversion.addAction(UIAlertAction(title: converters[0].label, style: UIAlertAction.Style.default, handler: {(conversion: UIAlertAction) -> Void in
             self.outputDisplay.text = self.converters[0].outputUnit
             self.inputDisplay.text = self.converters[0].inputUnit
+            self.currentConv = 0
             
         }))
         
         conversion.addAction(UIAlertAction(title: converters[1].label, style: UIAlertAction.Style.default, handler: {(conversion: UIAlertAction) -> Void in
             self.outputDisplay.text = self.converters[1].outputUnit
             self.inputDisplay.text = self.converters[1].inputUnit
+            self.currentConv = 1
             
         }))
         
         conversion.addAction(UIAlertAction(title: converters[2].label, style: UIAlertAction.Style.default, handler: {(conversion: UIAlertAction) -> Void in
             self.outputDisplay.text = self.converters[2].outputUnit
             self.inputDisplay.text = self.converters[2].inputUnit
+            self.currentConv = 2
         }))
         
         conversion.addAction(UIAlertAction(title: converters[3].label, style: UIAlertAction.Style.default, handler: {(conversion: UIAlertAction) -> Void in
             self.outputDisplay.text = self.converters[3].outputUnit
             self.inputDisplay.text = self.converters[3].inputUnit
+            self.currentConv = 3
         }))
         
         self.present(conversion, animated: true, completion: nil)
         
         
     }
+    
+    
+    @IBAction func clearButton(_ sender: Any) {
+        self.inputDisplay.text = self.converters[0].inputUnit
+        self.outputDisplay.text = self.converters[0].outputUnit
+    }
+    
+    
+    @IBAction func numberClick(_ sender: UIButton) {
+        if sender.titleLabel!.text != "."{
+            inputDisplay.text = inputDisplay.text! + sender.titleLabel!.text!
+        } else{
+            inputDisplay.text = inputDisplay.text! + "."
+        }
+        
+        
+    }
+    
+    
+    
     
     
 
